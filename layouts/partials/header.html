@@ -1,15 +1,15 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a href="{{ "/" | relLangURL }}" class="site-logo">
+    <a href="{{ "/" | absLangURL }}" class="site-logo">
       <span class="logo-bracket">[</span>
       <span class="logo-text">AppSec<em>Journey</em></span>
       <span class="logo-bracket">]</span>
     </a>
     <nav class="site-nav">
-      <a href="{{ "/" | relLangURL }}" class="{{ if .IsHome }}active{{ end }}">{{ i18n "nav_home" }}</a>
-      <a href="{{ "/posts/" | relLangURL }}" class="{{ if (eq .Section "posts") }}active{{ end }}">{{ i18n "nav_posts" }}</a>
-      <a href="{{ "/tags/" | relLangURL }}">{{ i18n "nav_tags" }}</a>
-      <a href="{{ "/about/" | relLangURL }}">{{ i18n "nav_about" }}</a>
+      <a href="{{ "/" | absLangURL }}" class="{{ if .IsHome }}active{{ end }}">{{ i18n "nav_home" }}</a>
+      <a href="{{ "posts/" | absLangURL }}" class="{{ if (eq .Section "posts") }}active{{ end }}">{{ i18n "nav_posts" }}</a>
+      <a href="{{ "tags/" | absLangURL }}">{{ i18n "nav_tags" }}</a>
+      <a href="{{ "about/" | absLangURL }}">{{ i18n "nav_about" }}</a>
       {{ with .Site.Params.github }}
       <a href="{{ . }}" target="_blank" class="nav-github">GitHub ↗</a>
       {{ end }}

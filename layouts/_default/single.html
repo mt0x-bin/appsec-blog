@@ -15,7 +15,7 @@
       {{- if .Translations -}}
       <div class="post-translations">
         {{- range .Translations -}}
-        <a href="{{ .RelPermalink }}" class="translation-link">{{ .Language.LanguageName }} →</a>
+        <a href="{{ .Permalink }}" class="translation-link">{{ .Language.LanguageName }} →</a>
         {{- end -}}
       </div>
       {{- end -}}
@@ -30,8 +30,8 @@
         <h4>{{ i18n "toc_title" }}</h4>
         {{ .TableOfContents }}
         <div class="toc-nav">
-          {{ with .PrevInSection }}<a class="toc-prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}
-          {{ with .NextInSection }}<a class="toc-next" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+          {{ with .PrevInSection }}<a class="toc-prev" href="{{ .Permalink }}">← {{ .Title }}</a>{{ end }}
+          {{ with .NextInSection }}<a class="toc-next" href="{{ .Permalink }}">{{ .Title }} →</a>{{ end }}
         </div>
       </div>
     </aside>
