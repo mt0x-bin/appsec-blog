@@ -1,13 +1,29 @@
 baseURL = "https://mt0x-bin.github.io/appsec-blog/"
-languageCode = "vi"
-title = "AppSec Journey"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
 [params]
   author = "mt0x-bin"
-  description = "Hành trình từ Pentester → Application Security Expert. Chia sẻ lab writeups, tool deep dives, code review notes và DevSecOps thực chiến."
   tagline = "Learn. Break. Defend. Repeat."
   github = "https://github.com/mt0x-bin"
   linkedin = ""
+
+[languages]
+  [languages.vi]
+    languageCode = "vi"
+    languageName = "Tiếng Việt"
+    weight = 1
+    title = "AppSec Journey"
+    [languages.vi.params]
+      description = "Hành trình từ Pentester → Application Security Expert. Chia sẻ lab writeups, tool deep dives, code review notes và DevSecOps thực chiến."
+
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    weight = 2
+    title = "AppSec Journey"
+    [languages.en.params]
+      description = "Journey from Pentester → Application Security Expert. Sharing lab writeups, tool deep dives, code review notes and hands-on DevSecOps."
 
 [taxonomies]
   tag = "tags"

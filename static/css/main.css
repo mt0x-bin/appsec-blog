@@ -96,6 +96,55 @@ a:hover { opacity: .75; }
 .menu-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
 .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--text); transition: .3s; }
 
+/* ── LANGUAGE SWITCHER ── */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: .15rem;
+  margin-left: .5rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.lang-current, .lang-link {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  padding: .3rem .6rem;
+  transition: all .2s;
+}
+
+.lang-current {
+  background: var(--green);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.lang-link {
+  color: var(--text-dim);
+  text-decoration: none;
+}
+.lang-link:hover { color: var(--green); background: var(--green-muted); opacity: 1; }
+
+/* ── TRANSLATION LINK ── */
+.post-translations {
+  margin-top: 1rem;
+  display: flex;
+  gap: .8rem;
+}
+
+.translation-link {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--amber);
+  border: 1px solid rgba(255,179,0,.3);
+  padding: .3rem .8rem;
+  border-radius: 2px;
+  transition: all .2s;
+}
+.translation-link:hover { border-color: var(--amber); background: rgba(255,179,0,.08); opacity: 1; }
+
 /* ── HERO ── */
 .hero {
   position: relative;
@@ -685,6 +734,8 @@ time { color: var(--text-dim); }
   .site-nav { display: none; position: fixed; inset: 60px 0 0; background: var(--bg); flex-direction: column; padding: 2rem; gap: 1.5rem; border-top: 1px solid var(--border); z-index: 99; }
   .site-nav.open { display: flex; }
   .menu-toggle { display: flex; }
+
+  .lang-switcher { margin-left: 0; align-self: flex-start; }
 
   .hero-content { padding: 2rem 1.5rem; }
 

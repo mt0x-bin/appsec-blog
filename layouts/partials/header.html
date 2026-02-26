@@ -1,18 +1,19 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a href="{{ "/" | relURL }}" class="site-logo">
+    <a href="{{ "/" | relLangURL }}" class="site-logo">
       <span class="logo-bracket">[</span>
       <span class="logo-text">AppSec<em>Journey</em></span>
       <span class="logo-bracket">]</span>
     </a>
     <nav class="site-nav">
-      <a href="{{ "/" | relURL }}" class="{{ if .IsHome }}active{{ end }}">Home</a>
-      <a href="{{ "/posts/" | relURL }}" class="{{ if (eq .Section "posts") }}active{{ end }}">Bài viết</a>
-      <a href="{{ "/tags/" | relURL }}">Tags</a>
-      <a href="{{ "/about/" | relURL }}">About</a>
+      <a href="{{ "/" | relLangURL }}" class="{{ if .IsHome }}active{{ end }}">{{ i18n "nav_home" }}</a>
+      <a href="{{ "/posts/" | relLangURL }}" class="{{ if (eq .Section "posts") }}active{{ end }}">{{ i18n "nav_posts" }}</a>
+      <a href="{{ "/tags/" | relLangURL }}">{{ i18n "nav_tags" }}</a>
+      <a href="{{ "/about/" | relLangURL }}">{{ i18n "nav_about" }}</a>
       {{ with .Site.Params.github }}
       <a href="{{ . }}" target="_blank" class="nav-github">GitHub ↗</a>
       {{ end }}
+      {{- partial "lang-switcher.html" . -}}
     </nav>
     <button class="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>

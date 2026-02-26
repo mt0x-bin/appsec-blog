@@ -1,0 +1,61 @@
+# Navigation
+[nav_home]
+other = "Trang chủ"
+
+[nav_posts]
+other = "Bài viết"
+
+[nav_tags]
+other = "Tags"
+
+[nav_about]
+other = "Giới thiệu"
+
+# Hero
+[hero_badge]
+other = "ĐANG HỌC TẬP"
+
+# Sections
+[recent_posts]
+other = "Bài viết gần đây"
+
+[no_posts]
+other = "Chưa có bài viết. Hãy bắt đầu viết bài đầu tiên của bạn!"
+
+[roadmap_title]
+other = "Lộ trình học tập"
+
+[read_more]
+other = "Đọc →"
+
+# Post
+[toc_title]
+other = "Nội dung bài"
+
+[min_read]
+other = "phút đọc"
+
+[post_count]
+one = "{{ .Count }} bài viết"
+other = "{{ .Count }} bài viết"
+
+# Roadmap phases
+[phase_in_progress]
+other = "Đang học"
+
+[phase_upcoming]
+other = "Sắp tới"
+
+[phase_goal]
+other = "Mục tiêu"
+
+# Footer
+[footer_built]
+other = "Xây dựng với"
+
+[footer_hosted]
+other = "Lưu trữ trên"
+
+# Language switcher
+[switch_lang]
+other = "EN"

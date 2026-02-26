@@ -1,0 +1,25 @@
+<div class="lang-switcher">
+  {{- $currentLang := .Language.Lang -}}
+  {{- $translations := .Translations -}}
+  {{- range .Site.Languages -}}
+    {{- if eq .Lang $currentLang -}}
+      <span class="lang-current" title="{{ .LanguageName }}">{{ upper .Lang }}</span>
+    {{- else -}}
+      {{- $targetLang := .Lang -}}
+      {{- $found := false -}}
+      {{- range $translations -}}
+        {{- if eq .Language.Lang $targetLang -}}
+          <a href="{{ .RelPermalink }}" class="lang-link" title="{{ .Language.LanguageName }}">{{ upper $targetLang }}</a>
+          {{- $found = true -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if not $found -}}
+        {{- if eq $targetLang "vi" -}}
+          <a href="{{ "/" | relURL }}" class="lang-link" title="{{ .LanguageName }}">{{ upper .Lang }}</a>
+        {{- else -}}
+          <a href="{{ (printf "/%s/" $targetLang) | relURL }}" class="lang-link" title="{{ .LanguageName }}">{{ upper .Lang }}</a>
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+</div>

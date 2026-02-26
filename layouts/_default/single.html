@@ -5,13 +5,20 @@
       <div class="post-header-meta">
         <span class="post-category">{{ with .Params.categories }}{{ index . 0 }}{{ end }}</span>
         <time>{{ .Date.Format "02 January 2006" }}</time>
-        <span class="read-time">{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+        <span class="read-time">{{ math.Round (div (countwords .Content) 200.0) }} {{ i18n "min_read" }}</span>
       </div>
       <h1 class="post-title">{{ .Title }}</h1>
       {{ if .Description }}<p class="post-desc">{{ .Description }}</p>{{ end }}
       <div class="post-tags-full">
         {{ range .Params.tags }}<span class="post-tag">{{ . }}</span>{{ end }}
       </div>
+      {{- if .Translations -}}
+      <div class="post-translations">
+        {{- range .Translations -}}
+        <a href="{{ .RelPermalink }}" class="translation-link">{{ .Language.LanguageName }} →</a>
+        {{- end -}}
+      </div>
+      {{- end -}}
     </div>
   </div>
   <div class="post-body container">
@@ -20,7 +27,7 @@
     </div>
     <aside class="post-toc">
       <div class="toc-sticky">
-        <h4>Nội dung bài</h4>
+        <h4>{{ i18n "toc_title" }}</h4>
         {{ .TableOfContents }}
         <div class="toc-nav">
           {{ with .PrevInSection }}<a class="toc-prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}

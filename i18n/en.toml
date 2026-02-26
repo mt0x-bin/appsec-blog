@@ -1,0 +1,61 @@
+# Navigation
+[nav_home]
+other = "Home"
+
+[nav_posts]
+other = "Posts"
+
+[nav_tags]
+other = "Tags"
+
+[nav_about]
+other = "About"
+
+# Hero
+[hero_badge]
+other = "ACTIVE LEARNING"
+
+# Sections
+[recent_posts]
+other = "Recent Posts"
+
+[no_posts]
+other = "No posts yet. Start writing your first one!"
+
+[roadmap_title]
+other = "Learning Roadmap"
+
+[read_more]
+other = "Read →"
+
+# Post
+[toc_title]
+other = "Table of Contents"
+
+[min_read]
+other = "min read"
+
+[post_count]
+one = "{{ .Count }} post"
+other = "{{ .Count }} posts"
+
+# Roadmap phases
+[phase_in_progress]
+other = "In Progress"
+
+[phase_upcoming]
+other = "Upcoming"
+
+[phase_goal]
+other = "Goal"
+
+# Footer
+[footer_built]
+other = "Built with"
+
+[footer_hosted]
+other = "Hosted on"
+
+# Language switcher
+[switch_lang]
+other = "VI"

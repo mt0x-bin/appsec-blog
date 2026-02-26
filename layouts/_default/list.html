@@ -2,7 +2,7 @@
 <div class="list-page container">
   <div class="list-header">
     <h1>{{ .Title }}</h1>
-    <p>{{ len .Pages }} bài viết</p>
+    <p>{{ i18n "post_count" (dict "Count" (len .Pages)) }}</p>
   </div>
   <div class="posts-grid">
     {{ range .Pages.ByDate.Reverse }}
@@ -19,7 +19,7 @@
         <div class="post-tags">
           {{ with .Params.tags }}{{ range first 3 . }}<span class="post-tag">{{ . }}</span>{{ end }}{{ end }}
         </div>
-        <a href="{{ .RelPermalink }}" class="read-more">Read →</a>
+        <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" }}</a>
       </div>
     </article>
     {{ end }}

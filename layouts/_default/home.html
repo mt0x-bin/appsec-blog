@@ -7,7 +7,7 @@
   <div class="hero-content">
     <div class="hero-badge">
       <span class="dot"></span>
-      <span>ACTIVE LEARNING</span>
+      <span>{{ i18n "hero_badge" }}</span>
     </div>
     <h1 class="hero-title">
       <span class="glitch" data-text="AppSec">AppSec</span>
@@ -29,7 +29,7 @@
 <section class="posts-section">
   <div class="container">
     <div class="section-header">
-      <h2>Bài viết gần đây</h2>
+      <h2>{{ i18n "recent_posts" }}</h2>
       <div class="section-line"></div>
     </div>
     <div class="posts-grid">
@@ -47,11 +47,11 @@
           <div class="post-tags">
             {{ with .Params.tags }}{{ range first 3 . }}<span class="post-tag">{{ . }}</span>{{ end }}{{ end }}
           </div>
-          <a href="{{ .RelPermalink }}" class="read-more">Read →</a>
+          <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" }}</a>
         </div>
       </article>
       {{ else }}
-      <p class="no-posts">Chưa có bài viết. Hãy bắt đầu viết bài đầu tiên của bạn!</p>
+      <p class="no-posts">{{ i18n "no_posts" }}</p>
       {{ end }}
     </div>
   </div>
@@ -60,7 +60,7 @@
 <section class="roadmap-section">
   <div class="container">
     <div class="section-header">
-      <h2>Lộ trình học tập</h2>
+      <h2>{{ i18n "roadmap_title" }}</h2>
       <div class="section-line"></div>
     </div>
     <div class="phases">
@@ -70,7 +70,7 @@
           <h4>Web & API Pentest</h4>
           <p>OWASP Top 10, Burp Suite, PortSwigger Labs</p>
         </div>
-        <div class="phase-status">In Progress</div>
+        <div class="phase-status">{{ i18n "phase_in_progress" }}</div>
       </div>
       <div class="phase">
         <div class="phase-num">02</div>
@@ -78,7 +78,7 @@
           <h4>Whitebox & Code Review</h4>
           <p>Semgrep, CodeQL, Source Audit</p>
         </div>
-        <div class="phase-status">Upcoming</div>
+        <div class="phase-status">{{ i18n "phase_upcoming" }}</div>
       </div>
       <div class="phase">
         <div class="phase-num">03</div>
@@ -86,7 +86,7 @@
           <h4>DevSecOps & SDLC</h4>
           <p>CI/CD Pipeline, SAST/DAST, Threat Modeling</p>
         </div>
-        <div class="phase-status">Upcoming</div>
+        <div class="phase-status">{{ i18n "phase_upcoming" }}</div>
       </div>
       <div class="phase">
         <div class="phase-num">04</div>
@@ -94,7 +94,7 @@
           <h4>AppSec Program Management</h4>
           <p>OWASP SAMM, KPIs, Policy & Governance</p>
         </div>
-        <div class="phase-status">Upcoming</div>
+        <div class="phase-status">{{ i18n "phase_upcoming" }}</div>
       </div>
       <div class="phase">
         <div class="phase-num">05</div>
@@ -102,7 +102,7 @@
           <h4>Advanced — OSWE / eWPTX</h4>
           <p>Logic Bugs, RCE Chains, Cert Prep</p>
         </div>
-        <div class="phase-status">Goal</div>
+        <div class="phase-status">{{ i18n "phase_goal" }}</div>
       </div>
     </div>
   </div>
