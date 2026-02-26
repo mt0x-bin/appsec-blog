@@ -26,6 +26,15 @@
   --font-head: 'Be Vietnam Pro', 'Syne', sans-serif;
   --font-body: 'Be Vietnam Pro', 'DM Sans', sans-serif;
 }
+html:lang(vi) .hero-title,
+html:lang(vi) .post-title,
+html:lang(vi) .post-card-title,
+html:lang(vi) .post-content h1,
+html:lang(vi) .post-content h2,
+html:lang(vi) .post-content h3,
+html:lang(vi) .post-content h4 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
