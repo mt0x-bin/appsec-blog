@@ -45,7 +45,7 @@
         <p class="post-card-summary">{{ .Summary }}</p>
         <div class="post-card-footer">
           <div class="post-tags">
-            {{ range first 3 .Params.tags }}<span class="post-tag">{{ . }}</span>{{ end }}
+            {{ with .Params.tags }}{{ range first 3 . }}<span class="post-tag">{{ . }}</span>{{ end }}{{ end }}
           </div>
           <a href="{{ .RelPermalink }}" class="read-more">Read →</a>
         </div>
