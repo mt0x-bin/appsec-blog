@@ -1,0 +1,23 @@
+baseURL = "https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/"
+languageCode = "vi"
+title = "AppSec Journey"
+theme = ""
+
+[params]
+  author = "Your Name"
+  description = "Hành trình từ Pentester → Application Security Expert. Chia sẻ lab writeups, tool deep dives, code review notes và DevSecOps thực chiến."
+  tagline = "Learn. Break. Defend. Repeat."
+  github = "https://github.com/YOUR_USERNAME"
+  linkedin = ""
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+    lineNumbersInTable = false
+  [markup.goldmark.renderer]
+    unsafe = true

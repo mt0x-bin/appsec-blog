@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="post-full">
+  <div class="post-header">
+    <div class="container">
+      <div class="post-header-meta">
+        <span class="post-category">{{ with .Params.categories }}{{ index . 0 }}{{ end }}</span>
+        <time>{{ .Date.Format "02 January 2006" }}</time>
+        <span class="read-time">{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+      </div>
+      <h1 class="post-title">{{ .Title }}</h1>
+      {{ if .Description }}<p class="post-desc">{{ .Description }}</p>{{ end }}
+      <div class="post-tags-full">
+        {{ range .Params.tags }}<span class="post-tag">{{ . }}</span>{{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="post-body container">
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+    <aside class="post-toc">
+      <div class="toc-sticky">
+        <h4>Nội dung bài</h4>
+        {{ .TableOfContents }}
+        <div class="toc-nav">
+          {{ with .PrevInSection }}<a class="toc-prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}
+          {{ with .NextInSection }}<a class="toc-next" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+        </div>
+      </div>
+    </aside>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,110 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="scanline"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>ACTIVE LEARNING</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="glitch" data-text="AppSec">AppSec</span>
+      <br/>
+      <em>Journey</em>
+    </h1>
+    <p class="hero-sub">{{ .Site.Params.tagline }}</p>
+    <p class="hero-desc">{{ .Site.Params.description }}</p>
+    <div class="hero-tags">
+      <span class="tag">#WebPentest</span>
+      <span class="tag">#API Security</span>
+      <span class="tag">#DevSecOps</span>
+      <span class="tag">#OWASP</span>
+      <span class="tag">#CodeReview</span>
+    </div>
+  </div>
+</section>
+
+<section class="posts-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Bài viết gần đây</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="posts-grid">
+      {{ range first 6 .Site.RegularPages.ByDate.Reverse }}
+      <article class="post-card">
+        <div class="post-card-meta">
+          <span class="post-category">{{ with .Params.categories }}{{ index . 0 }}{{ end }}</span>
+          <time>{{ .Date.Format "02 Jan 2006" }}</time>
+        </div>
+        <h3 class="post-card-title">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="post-card-summary">{{ .Summary }}</p>
+        <div class="post-card-footer">
+          <div class="post-tags">
+            {{ range first 3 .Params.tags }}<span class="post-tag">{{ . }}</span>{{ end }}
+          </div>
+          <a href="{{ .RelPermalink }}" class="read-more">Read →</a>
+        </div>
+      </article>
+      {{ else }}
+      <p class="no-posts">Chưa có bài viết. Hãy bắt đầu viết bài đầu tiên của bạn!</p>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="roadmap-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Lộ trình học tập</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="phases">
+      <div class="phase active">
+        <div class="phase-num">01</div>
+        <div class="phase-info">
+          <h4>Web & API Pentest</h4>
+          <p>OWASP Top 10, Burp Suite, PortSwigger Labs</p>
+        </div>
+        <div class="phase-status">In Progress</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">02</div>
+        <div class="phase-info">
+          <h4>Whitebox & Code Review</h4>
+          <p>Semgrep, CodeQL, Source Audit</p>
+        </div>
+        <div class="phase-status">Upcoming</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">03</div>
+        <div class="phase-info">
+          <h4>DevSecOps & SDLC</h4>
+          <p>CI/CD Pipeline, SAST/DAST, Threat Modeling</p>
+        </div>
+        <div class="phase-status">Upcoming</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">04</div>
+        <div class="phase-info">
+          <h4>AppSec Program Management</h4>
+          <p>OWASP SAMM, KPIs, Policy & Governance</p>
+        </div>
+        <div class="phase-status">Upcoming</div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">05</div>
+        <div class="phase-info">
+          <h4>Advanced — OSWE / eWPTX</h4>
+          <p>Logic Bugs, RCE Chains, Cert Prep</p>
+        </div>
+        <div class="phase-status">Goal</div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
