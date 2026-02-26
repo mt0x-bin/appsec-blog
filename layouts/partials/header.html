@@ -1,12 +1,12 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a href="{{ "/" | absLangURL }}" class="site-logo">
+    <a href="{{ .Site.Home.Permalink }}" class="site-logo">
       <span class="logo-bracket">[</span>
       <span class="logo-text">AppSec<em>Journey</em></span>
       <span class="logo-bracket">]</span>
     </a>
     <nav class="site-nav">
-      <a href="{{ "/" | absLangURL }}" class="{{ if .IsHome }}active{{ end }}">{{ i18n "nav_home" }}</a>
+      <a href="{{ .Site.Home.Permalink }}" class="{{ if .IsHome }}active{{ end }}">{{ i18n "nav_home" }}</a>
       <a href="{{ "posts/" | absLangURL }}" class="{{ if (eq .Section "posts") }}active{{ end }}">{{ i18n "nav_posts" }}</a>
       <a href="{{ "tags/" | absLangURL }}">{{ i18n "nav_tags" }}</a>
       <a href="{{ "about/" | absLangURL }}">{{ i18n "nav_about" }}</a>
