@@ -21,6 +21,12 @@
   --font-body: 'DM Sans', 'Be Vietnam Pro', sans-serif;
 }
 
+/* Vietnamese: use Be Vietnam Pro as primary for better diacritics */
+:lang(vi) {
+  --font-head: 'Be Vietnam Pro', 'Syne', sans-serif;
+  --font-body: 'Be Vietnam Pro', 'DM Sans', sans-serif;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
