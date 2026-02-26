@@ -40,14 +40,14 @@
           <time>{{ .Date.Format "02 Jan 2006" }}</time>
         </div>
         <h3 class="post-card-title">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h3>
         <p class="post-card-summary">{{ .Summary }}</p>
         <div class="post-card-footer">
           <div class="post-tags">
             {{ with .Params.tags }}{{ range first 3 . }}<span class="post-tag">{{ . }}</span>{{ end }}{{ end }}
           </div>
-          <a href="{{ .RelPermalink }}" class="read-more">{{ i18n "read_more" }}</a>
+          <a href="{{ .Permalink }}" class="read-more">{{ i18n "read_more" }}</a>
         </div>
       </article>
       {{ else }}

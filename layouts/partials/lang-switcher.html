@@ -9,15 +9,15 @@
       {{- $found := false -}}
       {{- range $translations -}}
         {{- if eq .Language.Lang $targetLang -}}
-          <a href="{{ .RelPermalink }}" class="lang-link" title="{{ .Language.LanguageName }}">{{ upper $targetLang }}</a>
+          <a href="{{ .Permalink }}" class="lang-link" title="{{ .Language.LanguageName }}">{{ upper $targetLang }}</a>
           {{- $found = true -}}
         {{- end -}}
       {{- end -}}
       {{- if not $found -}}
         {{- if eq $targetLang "vi" -}}
-          <a href="{{ "/" | relURL }}" class="lang-link" title="{{ .LanguageName }}">{{ upper .Lang }}</a>
+          <a href="{{ "/" | absLangURL }}" class="lang-link" title="{{ .LanguageName }}">{{ upper .Lang }}</a>
         {{- else -}}
-          <a href="{{ (printf "/%s/" $targetLang) | relURL }}" class="lang-link" title="{{ .LanguageName }}">{{ upper .Lang }}</a>
+          <a href="{{ (printf "%s/" $targetLang) | absURL }}" class="lang-link" title="{{ .LanguageName }}">{{ upper .Lang }}</a>
         {{- end -}}
       {{- end -}}
     {{- end -}}
