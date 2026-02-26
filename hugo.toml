@@ -1,7 +1,6 @@
 baseURL = "https://mt0x-bin.github.io/appsec-blog/"
 languageCode = "vi"
 title = "AppSec Journey"
-theme = ""
 
 [params]
   author = "mt0x-bin"
