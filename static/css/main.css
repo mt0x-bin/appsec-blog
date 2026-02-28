@@ -948,9 +948,8 @@ time { color: var(--text-dim); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .site-nav { display: none; position: fixed; inset: 60px 0 0; background: var(--bg); flex-direction: column; padding: 2rem; gap: 1.5rem; border-top: 1px solid var(--border); z-index: 99; overflow-y: auto; }
+  .site-nav { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--bg); flex-direction: column; padding: 2rem; gap: 1.5rem; border-top: 1px solid var(--border); z-index: 99; }
   .site-nav.open { display: flex; }
-  .site-nav::before { content: ''; position: fixed; inset: 60px 0 0; background: var(--bg); z-index: -1; }
   .menu-toggle { display: flex; }
 
   .lang-switcher { margin-left: 0; align-self: flex-start; }
