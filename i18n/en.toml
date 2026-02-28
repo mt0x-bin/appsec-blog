@@ -56,6 +56,25 @@ other = "Built with"
 [footer_hosted]
 other = "Hosted on"
 
+# Search
+[search_label]
+other = "Search"
+
+[search_placeholder]
+other = "Search posts..."
+
+[search_prompt]
+other = "Type to search..."
+
+[search_navigate]
+other = "navigate"
+
+[search_select]
+other = "select"
+
+[search_close]
+other = "close"
+
 # Language switcher
 [switch_lang]
 other = "VI"
