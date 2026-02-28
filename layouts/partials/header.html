@@ -13,6 +13,11 @@
       {{ with .Site.Params.github }}
       <a href="{{ . }}" target="_blank" class="nav-github">GitHub ↗</a>
       {{ end }}
+      <button class="search-toggle" aria-label="{{ i18n "search_label" }}" title="Ctrl+K">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+      </button>
       {{- partial "lang-switcher.html" . -}}
     </nav>
     <button class="menu-toggle" aria-label="Toggle menu">
@@ -20,3 +25,39 @@
     </button>
   </div>
 </header>
+
+<!-- Search Modal -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="{{ i18n "search_label" }}">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+      </svg>
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="{{ i18n "search_placeholder" }}"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="searchResults">
+      <div class="search-empty" id="searchEmpty">
+        <span class="search-prompt">{{ i18n "search_prompt" }}</span>
+      </div>
+    </div>
+    <div class="search-footer">
+      <span class="search-hint">
+        <kbd>↑</kbd><kbd>↓</kbd> {{ i18n "search_navigate" }}
+        <kbd>↵</kbd> {{ i18n "search_select" }}
+        <kbd>esc</kbd> {{ i18n "search_close" }}
+      </span>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.__searchIndexURL = {{ "index.json" | absLangURL }};
+</script>

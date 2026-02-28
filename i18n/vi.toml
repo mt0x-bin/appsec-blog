@@ -56,6 +56,25 @@ other = "Xây dựng với"
 [footer_hosted]
 other = "Lưu trữ trên"
 
+# Search
+[search_label]
+other = "Tìm kiếm"
+
+[search_placeholder]
+other = "Tìm bài viết..."
+
+[search_prompt]
+other = "Nhập để tìm kiếm..."
+
+[search_navigate]
+other = "di chuyển"
+
+[search_select]
+other = "chọn"
+
+[search_close]
+other = "đóng"
+
 # Language switcher
 [switch_lang]
 other = "EN"

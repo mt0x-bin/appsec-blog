@@ -36,3 +36,6 @@ defaultContentLanguageInSubdir = false
     lineNumbersInTable = false
   [markup.goldmark.renderer]
     unsafe = true
+
+[outputs]
+  home = ["HTML", "JSON"]

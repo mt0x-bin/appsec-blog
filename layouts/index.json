@@ -1,0 +1,20 @@
+{{- $pages := slice -}}
+{{- range where .Site.RegularPages "Type" "posts" -}}
+  {{- $tags := slice -}}
+  {{- with .Params.tags -}}
+    {{- range . -}}
+      {{- $tags = $tags | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $entry := dict
+    "title" .Title
+    "description" (.Description | default "")
+    "tags" $tags
+    "content" (.Plain | truncate 300 "")
+    "permalink" .Permalink
+    "date" (.Date.Format "02 Jan 2006")
+    "category" (index ((.Params.categories) | default (slice "")) 0 | default "")
+  -}}
+  {{- $pages = $pages | append $entry -}}
+{{- end -}}
+{{- $pages | jsonify -}}
