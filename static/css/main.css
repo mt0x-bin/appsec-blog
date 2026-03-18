@@ -532,6 +532,12 @@ time { color: var(--text-dim); }
 
 .read-time { color: var(--amber); }
 
+:lang(vi) .post-title,
+:lang(vi) .post-card-title,
+:lang(vi) .list-header h1 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
 .post-title {
   font-family: var(--font-head);
   font-size: clamp(2rem, 5vw, 3.5rem);
