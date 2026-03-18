@@ -49,7 +49,7 @@ This is the main part of the post. I split everything into two groups: theory an
 
 It's quite dense and reading specialized English takes a lot of time. So I've put together a supplementary Vietnamese resource:
 
-> **📥 Vietnamese summary ebook** — I used Google's NotebookLM to condense the AIO CSSLP 3rd Edition into a more concise Vietnamese version. **[Download here](#)** *(link to be updated)*
+> **📥 Vietnamese summary ebook** — I used Google's NotebookLM to condense the AIO CSSLP 3rd Edition into a more concise Vietnamese version. Download: **[PDF](https://mt0x-bin.github.io/appsec-blog/downloads/CSSLP_ebook.pdf)** · **[MOBI](https://mt0x-bin.github.io/appsec-blog/downloads/CSSLP_ebook.mobi)**
 >
 > ⚠️ *Important caveat: this is only a summary — treat it as a quick-read or review aid, not a replacement for the original. The author's analysis, real-world examples, and in-depth explanations in the original are what actually help you understand, not just memorize.*
 
@@ -59,7 +59,7 @@ After finishing a domain, I drill questions immediately — I don't wait until I
 
 **Anki flashcard deck:**
 
-> **📥 CSSLP Anki Deck** — I built this myself, organized by domain. Great for quick daily review, especially for concepts that are easy to confuse — like threat modeling frameworks, SDL phases, and types of testing. **[Download here](#)** *(link to be updated)*
+> **📥 CSSLP Anki Deck** — I built this myself, organized by domain. Great for quick daily review, especially for concepts that are easy to confuse — like threat modeling frameworks, SDL phases, and types of testing. **[Download (.apkg)](https://mt0x-bin.github.io/appsec-blog/downloads/CSSLP.apkg)**
 >
 > Anki uses a spaced repetition algorithm — it automatically adjusts to remind you to review material right before you're about to forget it. If you haven't used Anki before, it's worth trying. Takes about 30 minutes to get familiar with, but it pays off.
 

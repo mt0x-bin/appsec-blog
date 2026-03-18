@@ -49,7 +49,7 @@ Tám domain nghe nhiều, nhưng thực ra chúng liên kết với nhau khá t�
 
 Cuốn này khá dày và đọc tiếng Anh chuyên ngành mất nhiều thời gian. Vì vậy tôi đã tổng hợp thêm một tài nguyên tiếng Việt để hỗ trợ:
 
-> **📥 Ebook tóm tắt tiếng Việt** — tôi dùng NotebookLM của Google để tổng hợp nội dung từ cuốn AIO CSSLP 3rd Edition thành bản tiếng Việt súc tích hơn. **[Tải về tại đây](#)** *(link sẽ cập nhật)*
+> **📥 Ebook tóm tắt tiếng Việt** — tôi dùng NotebookLM của Google để tổng hợp nội dung từ cuốn AIO CSSLP 3rd Edition thành bản tiếng Việt súc tích hơn. Tải về: **[PDF](https://mt0x-bin.github.io/appsec-blog/downloads/CSSLP_ebook.pdf)** · **[MOBI](https://mt0x-bin.github.io/appsec-blog/downloads/CSSLP_ebook.mobi)**
 >
 > ⚠️ *Lưu ý quan trọng: đây chỉ là bản tóm tắt — nên coi như tài liệu đọc nhanh hoặc ôn lại, không thay thế được cuốn gốc. Những phân tích, ví dụ thực tế, và giải thích sâu của tác giả trong bản gốc mới là thứ thực sự giúp bạn hiểu, không chỉ nhớ.*
 
@@ -59,7 +59,7 @@ Cuốn này khá dày và đọc tiếng Anh chuyên ngành mất nhiều thời
 
 **Bộ flashcard Anki:**
 
-> **📥 Bộ Anki CSSLP** — tôi tự tạo theo từng domain, phù hợp để ôn nhanh hàng ngày, đặc biệt hữu ích với những khái niệm hay nhầm lẫn như các mô hình threat modeling, SDL phases, hay các loại testing. **[Tải về tại đây](#)** *(link sẽ cập nhật)*
+> **📥 Bộ Anki CSSLP** — tôi tự tạo theo từng domain, phù hợp để ôn nhanh hàng ngày, đặc biệt hữu ích với những khái niệm hay nhầm lẫn như các mô hình threat modeling, SDL phases, hay các loại testing. **[Tải về (.apkg)](https://mt0x-bin.github.io/appsec-blog/downloads/CSSLP.apkg)**
 >
 > Anki dùng thuật toán spaced repetition — tức là nó tự điều chỉnh để nhắc bạn ôn lại đúng lúc bạn sắp quên. Nếu chưa quen với Anki thì nên thử, mất khoảng 30 phút để làm quen nhưng đáng.
 
